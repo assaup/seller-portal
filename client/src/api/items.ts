@@ -21,10 +21,10 @@ export const itemsApi = {
         if (params.skip !== undefined) query.set('skip', String(params.skip))
         if (params.needsRevision) query.set('needsRevision', 'true')
         if (params.sortColumn) query.set('sortColumn', params.sortColumn)
-        if (params.sortDirection) query.set('sortDirectoin', params.sortDirection)
+        if (params.sortDirection) query.set('sortDirection', params.sortDirection)
         if (categories?.length) query.set('categories', categories.join(','))
 
-        return httpClient.get<ItemsResponse>(`/api/items/${query.toString()}`, signal)
+        return httpClient.get<ItemsResponse>(`/api/items?${query.toString()}`, signal)
     },
 
     getById: (id: string, signal?: AbortSignal): Promise<Item> => 
