@@ -10,8 +10,8 @@
     border-radius: var(--border-radius);
     font-size: 1.4rem;
     &_active{
-        color: #378ADD;
-        border-color: #378ADD;
+        color: var(--color-blue);
+        border-color: var(--color-blue);
     }
     &:disabled{
         border-color: rgb(171, 171, 171);

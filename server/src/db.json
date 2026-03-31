@@ -8,10 +8,10 @@
       "price": 65000,
       "createdAt": "2024-03-01T10:00:00Z",
       "params": {
-        "type": "phone",
+        "type": "Телефон",
         "brand": "Apple",
         "model": "13 Pro",
-        "condition": "used",
+        "condition": "Б/у",
         "color": "Графит"
       }
     },
@@ -22,7 +22,7 @@
       "price": 120000,
       "createdAt": "2024-03-05T12:00:00Z",
       "params": {
-        "type": "laptop",
+        "type": "Ноутбук",
         "brand": "Apple",
         "model": "Air M2"
       }
@@ -38,7 +38,7 @@
         "brand": "Toyota",
         "model": "Camry",
         "yearOfManufacture": 2020,
-        "transmission": "automatic",
+        "transmission": "Автомат",
         "mileage": 45000,
         "enginePower": 180
       }
@@ -53,7 +53,7 @@
         "brand": "Honda",
         "model": "Civic",
         "yearOfManufacture": 2018,
-        "transmission": "manual"
+        "transmission": "Механика"
       }
     },
     {
@@ -61,10 +61,10 @@
       "category": "real_estate",
       "title": "2-комнатная квартира на Арбате",
       "description": "Светлая квартира с евроремонтом",
-      "price": 150000000,
+      "price": 15000000,
       "createdAt": "2024-01-10T11:00:00Z",
       "params": {
-        "type": "flat",
+        "type": "Квартира",
         "address": "Москва, ул. Арбат, 12",
         "area": 54,
         "floor": 5
@@ -77,8 +77,150 @@
       "price": 1800000,
       "createdAt": "2024-01-20T16:00:00Z",
       "params": {
-        "type": "room",
+        "type": "Комната",
         "area": 18
+      }
+    },
+    {
+      "id": "7",
+      "category": "electronics",
+      "title": "Samsung Galaxy S23",
+      "description": "Куплен месяц назад, на гарантии",
+      "price": 55000,
+      "createdAt": "2024-03-10T09:00:00Z",
+      "params": {
+        "type": "Телефон",
+        "brand": "Samsung",
+        "model": "Galaxy S23",
+        "condition": "Новый",
+        "color": "Чёрный"
+      }
+    },
+    {
+      "id": "8",
+      "category": "electronics",
+      "title": "iPad Pro 12.9",
+      "price": 89000,
+      "createdAt": "2024-03-08T14:00:00Z",
+      "params": {
+        "type": "Другое",
+        "brand": "Apple",
+        "model": "iPad Pro 12.9"
+      }
+    },
+    {
+      "id": "9",
+      "category": "auto",
+      "title": "Kia Sportage 2021",
+      "description": "Полный привод, панорамная крыша, один хозяин",
+      "price": 3100000,
+      "createdAt": "2024-02-10T10:00:00Z",
+      "params": {
+        "brand": "Kia",
+        "model": "Sportage",
+        "yearOfManufacture": 2021,
+        "transmission": "Автомат",
+        "mileage": 32000,
+        "enginePower": 177
+      }
+    },
+    {
+      "id": "10",
+      "category": "auto",
+      "title": "Lada Vesta",
+      "price": 750000,
+      "createdAt": "2024-01-25T11:00:00Z",
+      "params": {
+        "brand": "Lada",
+        "model": "Vesta",
+        "yearOfManufacture": 2019,
+        "transmission": "Механика"
+      }
+    },
+    {
+      "id": "11",
+      "category": "real_estate",
+      "title": "Студия в новостройке",
+      "description": "Чистовая отделка, рядом метро",
+      "price": 5200000,
+      "createdAt": "2024-03-12T13:00:00Z",
+      "params": {
+        "type": "Квартира",
+        "address": "Москва, ул. Ленина, 45",
+        "area": 28,
+        "floor": 12
+      }
+    },
+    {
+      "id": "12",
+      "category": "real_estate",
+      "title": "Дом в Подмосковье",
+      "description": "Кирпичный дом, большой участок, баня",
+      "price": 12000000,
+      "createdAt": "2024-02-05T09:00:00Z",
+      "params": {
+        "type": "Дом",
+        "address": "Московская обл., г. Пушкино",
+        "area": 120,
+        "floor": 2
+      }
+    },
+    {
+      "id": "13",
+      "category": "electronics",
+      "title": "Sony PlayStation 5",
+      "description": "В комплекте два геймпада и 3 игры",
+      "price": 45000,
+      "createdAt": "2024-03-15T16:00:00Z",
+      "params": {
+        "type": "Другое",
+        "brand": "Sony",
+        "model": "PlayStation 5",
+        "condition": "Б/у",
+        "color": "Белый"
+      }
+    },
+    {
+      "id": "14",
+      "category": "auto",
+      "title": "BMW 3 Series 2019",
+      "description": "М-пакет, кожаный салон, состояние отличное",
+      "price": 3800000,
+      "createdAt": "2024-01-30T12:00:00Z",
+      "params": {
+        "brand": "BMW",
+        "model": "3 Series",
+        "yearOfManufacture": 2019,
+        "transmission": "Автомат",
+        "mileage": 58000,
+        "enginePower": 258
+      }
+    },
+    {
+      "id": "15",
+      "category": "real_estate",
+      "title": "3-комнатная квартира у парка",
+      "price": 18500000,
+      "createdAt": "2024-02-28T10:00:00Z",
+      "params": {
+        "type": "Квартира",
+        "address": "Москва, Парковая ул., 7",
+        "area": 78
+      }
+    },
+    {
+      "id": "16",
+      "category": "electronics",
+      "title": "Lenovo ThinkPad X1",
+      "description": "Рабочий ноутбук, i7, 16GB RAM, SSD 512GB",
+      "price": 75000,
+      "createdAt": "2024-03-18T11:00:00Z",
+      "params": {
+        "type": "Ноутбук",
+        "brand": "Lenovo",
+        "model": "ThinkPad X1",
+        "condition": "Б/у",
+        "color": "Чёрный"
       }
     }
   ]

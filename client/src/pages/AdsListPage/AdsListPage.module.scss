@@ -1,6 +1,7 @@
 .loyuot {
-    padding: 2.5rem 3rem;
-    background-color: var(--color-gray-bg) 
+  padding: 2.5rem 3rem;
+  background-color: var(--color-gray-bg);
+  height: 100vw;
 }
 section{
     margin-bottom: 1.6rem;
@@ -158,7 +159,7 @@ section{
         border-radius: 50%;
     }
     &__input:checked + &__slider {
-        background-color: #378ADD;
+        background-color: var(--color-blue);
     }
     &__input:checked + &__slider:before { 
         transform: translateX(20px); 
