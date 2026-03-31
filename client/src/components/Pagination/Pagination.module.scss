@@ -1,0 +1,19 @@
+.pagination{
+    display: flex;
+    gap: .8rem
+}
+.btn {
+    width: 3.2rem;
+    height: 3.2rem;
+    border: 1px solid var(--color-gray-title);
+    background-color: var(--color-white);
+    border-radius: var(--border-radius);
+    font-size: 1.4rem;
+    &_active{
+        color: #378ADD;
+        border-color: #378ADD;
+    }
+    &:disabled{
+        border-color: rgb(171, 171, 171);
+    }
+}

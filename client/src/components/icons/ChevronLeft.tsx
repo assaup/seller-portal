@@ -3,7 +3,7 @@ type Props = {
     color?: string
 }
 
-const ChevronLeft = ({size = 20, color='currentColor'}:Props) => {
+const ChevronLeft = ({size = 12, color='currentColor'}:Props) => {
     return (
         <svg width={size} height={size} viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clipPath="url(#clip0_4465_91)">

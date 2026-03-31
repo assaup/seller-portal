@@ -45,7 +45,7 @@ const Pagination = (props: Props) => {
                 <button
                     key={i}
                     onClick={()=>onChange(i)}
-                    className={i === page ? styles.active : styles.btn}
+                    className={i === page ? `${styles.btn} ${styles.btn_active}` : styles.btn}
                 >
                     {i}
                 </button>)
