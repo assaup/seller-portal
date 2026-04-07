@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom"
+import { useNavigate, useParams } from "react-router-dom"
 import { useFetch } from "../../hooks/useFetch"
 import type { Item } from "../../types"
 import { itemsApi } from "../../api/items"
@@ -12,6 +12,14 @@ const AdViewPage = () => {
   const { data, error, loading } = useFetch<Item>(
     (signal) => itemsApi.getById(id!, signal), [id]
   )
+  const navigate = useNavigate()
+  const handleEdit = () => {
+    navigate(`/ads/${id}/edit`)
+  }
+  const handleListAds = () => {
+    navigate(`/ads`)
+  }
+
   if (loading) return <p>Загрузка...</p>
   if (error) return <p>Ошибка: {error}</p>
   if (!data) return null
@@ -45,13 +53,27 @@ const AdViewPage = () => {
     if (!val) emptyFields.push(paramsToRu[key] ?? key)
   })
 
+
   return (
     <div className={styles.layout}>
       <section className={styles.section}>
           <div className={styles.info}>
             <div>
               <h1 className={styles.title}>{data.title}</h1>
-              <button className={styles.btn}>Редактировать</button>
+              <div className={styles.btns}>
+                <button 
+                  className={styles.btn} 
+                  onClick={handleEdit}
+                >
+                  Редактировать
+                </button>
+                <button 
+                  className={`${styles.btn} ${styles.btn_back}`}
+                  onClick={handleListAds}
+                >
+                  К списку
+                </button>
+              </div>
             </div>
             <div className={styles.info__rightWrapper}>
               <strong className={styles.price}>{data.price.toLocaleString('ru-RU')} ₽</strong>
@@ -92,7 +114,7 @@ const AdViewPage = () => {
               <p>У объявления не заполнены поля:</p>
               <ul className={styles.needsRevision__list}>
                 {emptyFields.map((field) => 
-                  <li>{field}</li>
+                  <li key={field}>{field}</li>
                 )}
               </ul>
             </div>
@@ -100,12 +122,14 @@ const AdViewPage = () => {
             <div>
               <h2 className={styles.titleSecond}>Характеристики</h2>
               <table>
-                {Object.entries(data.params).map(([key, val]) =>
-                  <tr>
-                    <th key={key} className={styles.key}>{paramsToRu[key]}</th>
-                    <th key={key}>{val}</th>
-                  </tr>
-                )}
+                <tbody>
+                  {Object.entries(data.params).map(([key, val]) =>
+                    <tr key={key}>
+                      <td className={styles.key}>{paramsToRu[key]}</td>
+                      <td >{val}</td>
+                    </tr>
+                  )}
+                </tbody>
               </table>
             </div>
           </div>

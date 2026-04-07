@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import { AdEditPage } from "./pages/AdEditPage/AdEditPage";
+import AdEditPage from "./pages/AdEditPage/AdEditPage";
 import AdViewPage from "./pages/AdViewPage/AdViewPage";
 import AdsListPage from "./pages/AdsListPage/AdsListPage";
 import "./styles";

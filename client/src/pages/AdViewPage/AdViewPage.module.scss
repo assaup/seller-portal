@@ -1,6 +1,6 @@
 .layout {
   padding: 3.2rem;
-  background-color: var(--color-gray-bg);
+  background-color: var(--color-white);
   height: 100vw;
   font-size: 1.6rem;
 
@@ -22,12 +22,19 @@
     font-size: 3rem;
     margin-bottom: 1.2rem;
 }
+.btns{
+    display: flex;
+    gap: 1rem;
+}
 .btn{
     border: none;
     color: var(--color-white);
     background-color: var(--color-blue);
     border-radius: var(--border-radius);
     padding: .8rem 1.2rem;
+    &_back{
+        background-color: var(--color-gray-title)
+    }
 }
 
 .price{

@@ -9,7 +9,7 @@ import FilterToCards from "../../components/icons/FilterToCards";
 import FilterToList from "../../components/icons/FilterToList";
 import styles from "./AdsListPage.module.scss";
 
-const LIMIT = 5;
+const LIMIT = 6;
 const CATEGORIES: { value: Category; label: string }[] = [
   { value: "electronics", label: "Электроника" },
   { value: "auto", label: "Транспорт" },

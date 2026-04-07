@@ -10,7 +10,7 @@
       "params": {
         "type": "Телефон",
         "brand": "Apple",
-        "model": "13 Pro",
+        "model": "13 ",
         "condition": "Б/у",
         "color": "Графит"
       }
@@ -47,27 +47,29 @@
       "id": "4",
       "category": "auto",
       "title": "Honda Civic",
-      "price": 1200000,
+      "price": 1600000,
       "createdAt": "2024-02-15T14:00:00Z",
       "params": {
         "brand": "Honda",
         "model": "Civic",
-        "yearOfManufacture": 2018,
-        "transmission": "Механика"
+        "yearOfManufacture": 2017,
+        "transmission": "Механика",
+        "enginePower": 160,
+        "mileage": 1200000
       }
     },
     {
       "id": "5",
       "category": "real_estate",
       "title": "2-комнатная квартира на Арбате",
-      "description": "Светлая квартира с евроремонтом",
-      "price": 15000000,
+      "description": "",
+      "price": 120000000,
       "createdAt": "2024-01-10T11:00:00Z",
       "params": {
         "type": "Квартира",
         "address": "Москва, ул. Арбат, 12",
-        "area": 54,
-        "floor": 5
+        "area": 540,
+        "floor": 9
       }
     },
     {
@@ -78,7 +80,8 @@
       "createdAt": "2024-01-20T16:00:00Z",
       "params": {
         "type": "Комната",
-        "area": 18
+        "area": 18,
+        "address": ""
       }
     },
     {

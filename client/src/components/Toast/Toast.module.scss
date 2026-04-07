@@ -1,0 +1,17 @@
+.toast {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  padding: 1.2rem 2rem;
+  z-index: 1000;
+  width: 30rem;
+  
+  &.success { 
+    background: rgb(183, 235, 143);
+    border: 1px solid green;
+    }
+  &.error { 
+    background: rgb(255, 204, 199);
+    border: 1px solid red;
+    }
+}
