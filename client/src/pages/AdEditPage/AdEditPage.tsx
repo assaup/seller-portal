@@ -7,6 +7,7 @@ import ParamsFields from '../../components/ParamsFields/ParamsFields'
 import LampIcon from '../../components/icons/LampIcon'
 import styles from './AdEditPage.module.scss'
 import Toast from '../../components/Toast/Toast'
+import { useLocalStorage } from '../../hooks/useLocalStorage'
 
 
 const AdEditPage = () => {
@@ -15,10 +16,14 @@ const AdEditPage = () => {
   const { data, loading, error } = useFetch<Item>(
     (signal) => itemsApi.getById(id!, signal), [id]
   )
-
-  const [form, setForm ] = useState<ItemUpdatePayload | null>(null)
+  const [draft, setDraft, removeDraft] = useLocalStorage<ItemUpdatePayload | null> (
+    `draft_${id}`,
+    null
+  )
+  const [form, setForm ] = useState<ItemUpdatePayload | null>(draft)
   const [touched, setTouched] = useState<Record<string, boolean>>({})
   const [toast, setToast] = useState<{message: string, type: 'success' | 'error'} | null>(null)
+  
 
   const currentForm = form ?? (data ? {
     category: data.category,
@@ -45,7 +50,9 @@ const AdEditPage = () => {
       description: data.description,
       params: data.params
     }
-    return { ...base, [field]: value }
+    const next = {...base, [field]: value}
+    setDraft(next)
+    return next
     })
   }
   const handleParamChange = (field: string, value: unknown) => {
@@ -57,7 +64,9 @@ const AdEditPage = () => {
       description: data.description,
       params: data.params
     }
-    return { ...base, params: { ...base.params, [field]: value } }
+    const next = { ...base, params: { ...base.params, [field]: value } }
+    setDraft(next)
+    return next
   })
   }
   const handleSubmit = async(e: React.SubmitEvent) => {
@@ -68,6 +77,7 @@ const AdEditPage = () => {
       setTimeout(() => {
         navigate(`/ads/${id}`)
       }, 700)
+      removeDraft()
     } catch(err) {
       setToast({message: 'Ошибка сохранения. Попробуйте ещё раз или зайдите позже.', type: 'error'})
       console.error(err)
@@ -75,6 +85,7 @@ const AdEditPage = () => {
   }
   const handleReset = () => {
     navigate(`/ads/${id}`)
+    removeDraft()
   }
   const handleBlur = (field: string) => {
     setTouched((prev) => ({...prev, [field]:true }))
